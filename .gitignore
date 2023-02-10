@@ -38,3 +38,6 @@ next-env.d.ts
 
 # __steps to follow
 __steps.js
+
+# __FIXME: 
+askQuestion.ts
