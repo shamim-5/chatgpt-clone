@@ -31,7 +31,7 @@ function SideBar() {
       {session && (
         <div onClick={() => signOut()} className="cursor-pointer ">
           <img
-            src={session.user?.image!}
+            src={session.user?.image! || `https://ui-avatars.com/api/?name=${session?.user?.name}`}
             alt="Profile pic"
             className="h-12 w-12 rounded-full mx-auto mb-2 hover:opacity-50"
           />

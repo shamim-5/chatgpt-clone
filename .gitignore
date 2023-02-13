@@ -35,9 +35,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# openAi&&firebase
+serviceAccountKey.json
 
 # __steps to follow
 __steps.js
-
-# __FIXME: 
-askQuestion.ts

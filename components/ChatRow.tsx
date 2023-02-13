@@ -17,7 +17,6 @@ function ChatRow({ id }: Props) {
   const { data: session } = useSession();
   const [active, setActive] = useState(false);
 
-  // FIXME:
   const [messages] = useCollection(collection(db, "users", session?.user?.email!, "chats", id, "messages"));
 
   useEffect(() => {
@@ -32,7 +31,7 @@ function ChatRow({ id }: Props) {
     router.replace("/");
   };
 
-  // console.log("[Get firestore single chat available messages :]", messages?.docs);
+  // console.log("[Get firestore messages text:]", messages?.docs[0]?.data().text);
   return (
     <Link href={`chat/${id}`} className={`chatRow ${active && "bg-gray-700/50"}`}>
       <ChatBubbleLeftIcon className="h-5 w-5" />
